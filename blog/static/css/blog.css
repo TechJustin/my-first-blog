@@ -1,7 +1,8 @@
 .page-header {
-    background-color: #ff9400;
+    background-color: #FF2929;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
+    text-align: center
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
@@ -11,7 +12,7 @@
 }
 
 .content {
-    margin-left: 40px;
+    margin-left: 40px;    
 }
 
 h1, h2, h3, h4 {
@@ -37,8 +38,17 @@ h1, h2, h3, h4 {
     margin-right: 20px;
 }
 
-.post {
+.post {	
+	columns: 200px 8;
     margin-bottom: 70px;
+    display: inline-block;
+    margin: 0 1.5%;
+    width: 30%;	
+}
+
+.post img {
+    max-height: 300px;
+    max-width: 300px;
 }
 
 .post h1 a, .post h1 a:visited {
