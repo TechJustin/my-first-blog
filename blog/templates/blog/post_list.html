@@ -1,18 +1,25 @@
+
+    
 {% extends 'blog/base.html' %}
 
 {% block content %}
     {% for post in posts %}
         <div class="post">
-            <div class="date">
-                {{ post.published_date }}
-            </div>
-			<h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>    
-			{% if post.picture_URL %}
-				<img src="{{ post.picture_URL }}" />
-			{% endif %}        	
-			<p>{{ post.text|linebreaks }}</p>
-			<!-- <h1><a href="{% url 'user_page' pk=post.author.pk %}">{{ post.author }}</a></h1> 
-			-->
-		</div>
+			<div class="col-md-10">
+				<div class="date">
+					{{ post.published_date }}
+				</div>
+				
+				<h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>    
+				<div class="picture">
+					{% if post.picture_URL %}
+						<img src="{{ post.picture_URL }}" /> 
+					{% endif %}  
+				</div>      	
+				<p>{{ post.text|linebreaks }}</p>
+				<!-- <h1><a href="{% url 'user_page' pk=post.author.pk %}">{{ post.author }}</a></h1> 
+				-->
+			</div>
+			</div>
     {% endfor %}
 {% endblock content %}
